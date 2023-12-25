@@ -538,16 +538,16 @@
                     </div>
                 </div>
 
-                <div class="text-center">
-                    <!-- BEGIN pagination -->
+                <!-- <div class="text-center">
+                   
                     <ul class="pagination">
                         <li class="active"><a href="#">1</a></li>
                         <li><a href="#">2</a></li>
                         <li><a href="#">3</a></li>
                         <li><a href="#">4</a></li>
                     </ul>
-                    <!-- END pagination -->
-                </div>
+                   
+                </div> -->
 
             </div>
         </div>
@@ -562,7 +562,8 @@
                             <h1 class="section-title title_sty1">online reservation</h1>
                             <p class="short">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                             </p>
-                            <form id="reserv_form" method="post">
+                            <form id="reserv_form" method="post" action="{% url 'pages:reserve' %}">
+                                {% csrf_token %}
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group form_pos">
